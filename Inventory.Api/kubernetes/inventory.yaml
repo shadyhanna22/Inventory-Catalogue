@@ -1,0 +1,57 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: inventory-deployment
+# name of the pods it will manage
+spec:
+  selector:
+    matchLabels:
+      app: inventory
+  template:
+    metadata:
+    # labels all the pods that are related to inventory
+      labels:
+        app: inventory
+    # name the list of containers
+    spec:
+      containers:
+      - name: inventory
+        image: shadyhanna22/inventory:v2
+        resources:
+          limits:
+            memory: "128Mi"
+            #half a cpu
+            cpu: "500m"
+        ports:
+        - containerPort: 80
+        env:
+          - name: MongoDbSettings__Host
+            value: mongodb-service
+          - name: MongoDbSettings__Password
+            valueFrom:
+              secretKeyRef:
+                name: inventory-secrets
+                key: mongodb-password
+        #make use of health checks
+        livenessProbe:
+          httpGet:
+            path: /health/live
+            port: 80
+        readinessProbe:
+          httpGet:
+            path: /health/ready
+            port: 80
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: inventory-servive
+spec:
+  type: LoadBalancer
+  # select the name of the pod
+  selector:
+    app: inventory
+  ports:
+  - port: 80
+    targetPort: 80

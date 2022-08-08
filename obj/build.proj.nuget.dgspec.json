@@ -1,0 +1,48 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\_Projects\\Interview\\PortLink\\Inventory\\build.proj": {}
+  },
+  "projects": {
+    "D:\\_Projects\\Interview\\PortLink\\Inventory\\build.proj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\_Projects\\Interview\\PortLink\\Inventory\\build.proj",
+        "projectName": "build",
+        "projectPath": "D:\\_Projects\\Interview\\PortLink\\Inventory\\build.proj",
+        "packagesPath": "C:\\Users\\shady\\.nuget\\packages\\",
+        "outputPath": "D:\\_Projects\\Interview\\PortLink\\Inventory\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\shady\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net45"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net45": {
+            "targetAlias": "net45",
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net45": {
+          "targetAlias": "net45",
+          "dependencies": {
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.2, )",
+              "autoReferenced": true
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

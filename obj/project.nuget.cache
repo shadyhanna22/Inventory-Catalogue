@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "aJ/oIePzzPAzJIflB/2FicqnvI1guD+MPw85FV2rqV8rVhxOuynxyWgQvu0exTcRryVCPyIiBYRN9KrZVTXj+Q==",
+  "success": true,
+  "projectFilePath": "D:\\_Projects\\Interview\\PortLink\\Inventory\\build.proj",
+  "expectedPackageFiles": [
+    "C:\\Users\\shady\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.2\\microsoft.netframework.referenceassemblies.1.0.2.nupkg.sha512",
+    "C:\\Users\\shady\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net45\\1.0.2\\microsoft.netframework.referenceassemblies.net45.1.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
